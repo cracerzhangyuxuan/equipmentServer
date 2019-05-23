@@ -11,6 +11,10 @@
     <!--读取数据库配置文件-->
     <context:property-placeholder location="classpath:config/db.properties"/>
 
+    <!--开启扫描@Autiwired-->
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.service"/>
 
     <!--配置数据源-->
     <bean name="datasource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -45,11 +49,11 @@
 
     <bean name="" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="datasource"/>
-        <property name="typeAliasesPackage" value="sugar.bean"/>
+        <property name="typeAliasesPackage" value="com.bean"/>
     </bean>
 
     <!--mapper工厂-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="sugar.mapper"/>
+        <property name="basePackage" value="com.mapper"/>
     </bean>
 </beans>
