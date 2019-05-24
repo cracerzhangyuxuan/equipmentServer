@@ -53,6 +53,18 @@ public class Category {
         this.cgAdmin = cgAdmin == null ? null : cgAdmin.trim();
     }
 
+<<<<<<< HEAD
 
 
+=======
+    @Override
+    public String toString() {
+        return "Category{" +
+                "cgId=" + cgId +
+                ", cgName='" + cgName + '\'' +
+                ", cgDate=" + cgDate +
+                ", cgAdmin='" + cgAdmin + '\'' +
+                '}';
+    }
+>>>>>>> 3ea510837345b02647d78f54e7f37a3e7efcfa06
 }
