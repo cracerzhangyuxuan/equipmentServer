@@ -9,6 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
+
 @Controller
 @RequestMapping(value = "test",produces = "application/json;charset=utf-8")
 public class testController {
@@ -18,4 +20,10 @@ public class testController {
     public String test(){
         return "Hello World!";
     }
+
+
+        
+
+
+
 }
