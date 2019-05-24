@@ -88,7 +88,7 @@ public class categoryTest {
         else {
             category.setCgName("相机类");
             category.setCgDate(new Date());
-            category.setCgAdmin("admin456");
+            category.setCgAdmin("admin789");
             CategoryService.updateByPrimaryKey(category);
         }
         System.out.println("success5");
