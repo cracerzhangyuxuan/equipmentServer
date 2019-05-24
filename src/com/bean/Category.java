@@ -42,4 +42,14 @@ public class Category {
     public void setCgAdmin(String cgAdmin) {
         this.cgAdmin = cgAdmin == null ? null : cgAdmin.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "cgId=" + cgId +
+                ", cgName='" + cgName + '\'' +
+                ", cgDate=" + cgDate +
+                ", cgAdmin='" + cgAdmin + '\'' +
+                '}';
+    }
 }
