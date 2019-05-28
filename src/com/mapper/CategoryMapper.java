@@ -21,6 +21,7 @@ public interface CategoryMapper {
 
     Category selectByPrimaryKey(Integer cgId);
 
+
     int updateByExampleSelective(@Param("record") Category record, @Param("example") CategoryExample example);
 
     int updateByExample(@Param("record") Category record, @Param("example") CategoryExample example);
