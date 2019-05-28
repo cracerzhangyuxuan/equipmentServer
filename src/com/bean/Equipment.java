@@ -112,4 +112,21 @@ public class Equipment {
     public void setImages(String images) {
         this.images = images == null ? null : images.trim();
     }
+
+    @Override
+    public String toString() {
+        return "Equipment{" +
+                "eqId=" + eqId +
+                ", eqName='" + eqName + '\'' +
+                ", eqNumber='" + eqNumber + '\'' +
+                ", categoryId=" + categoryId +
+                ", introduce='" + introduce + '\'' +
+                ", amount=" + amount +
+                ", loan=" + loan +
+                ", numberUse=" + numberUse +
+                ", eqDate=" + eqDate +
+                ", eqAdmin='" + eqAdmin + '\'' +
+                ", images='" + images + '\'' +
+                '}';
+    }
 }
