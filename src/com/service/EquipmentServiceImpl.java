@@ -29,22 +29,13 @@ public class EquipmentServiceImpl implements EquipmentService {
     public int insert(Equipment record){
         return equipmentMapper.insert(record);
     }
-
+     @Override
+     public long countByExample(EquipmentExample example){
+        return equipmentMapper.countByExample(example);
+     }
 }
 
 
 
 
 
-class Test{
-    public static void Main(String[] args){
-        EquipmentService equipmentService= new EquipmentServiceImpl();
-
-        Equipment equipment = equipmentService.selectByPrimaryKey(250);
-
-        equipmentService.deleteByPrimaryKey(110);
-        equipment.setAmount(55623);
-
-        equipmentService.updateByPrimaryKeySelective(equipment);
-    }
-}

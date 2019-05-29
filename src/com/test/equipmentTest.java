@@ -16,6 +16,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.xml.crypto.Data;
+import java.util.Date;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:config/applicationContext.xml")
 public class equipmentTest {
@@ -61,14 +64,20 @@ public class equipmentTest {
     }
     @Test
     public  void  insertSelectiveTest(){
-        Equipment  equipment=equipmentService.selectByPrimaryKey(1);
-        equipment.setEqName("小明明");
-        int i= equipmentService.updateByPrimaryKeySelective(equipment);
+        String str="小明明";
+        Equipment  equipment=new Equipment();
+        equipment.setEqName(str);
+        equipment.setAmount(9);
+        equipment.setCategoryId(6);
+        equipment.setEqAdmin("李华");
+        equipment.setEqDate(new Date());
+        equipment.setImages("[]");
+        int i= equipmentService.insert(equipment);
         if(i>0) {
-            System.out.println("修改成功"+i);
+            System.out.println("插入成功"+i);
         }
         else {
-            System.out.println("修改失败");
+            System.out.println("插入失败");
         }
     }
 }
