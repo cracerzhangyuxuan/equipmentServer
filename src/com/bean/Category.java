@@ -53,6 +53,4 @@ public class Category {
         this.cgAdmin = cgAdmin == null ? null : cgAdmin.trim();
     }
 
-
-
 }

@@ -3,9 +3,10 @@ package com.mapper;
 import com.bean.Category;
 import com.bean.CategoryExample;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
-
+@Repository
 public interface CategoryMapper {
     long countByExample(CategoryExample example);
 
@@ -20,6 +21,7 @@ public interface CategoryMapper {
     List<Category> selectByExample(CategoryExample example);
 
     Category selectByPrimaryKey(Integer cgId);
+
 
     int updateByExampleSelective(@Param("record") Category record, @Param("example") CategoryExample example);
 
